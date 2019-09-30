@@ -11,12 +11,7 @@ app.use(express.static('public'))
 //routes
 app.get('/', (req, res) => {
     res.render('index')
-})
-
-
-
-
-
+});
 
 //Listen on port 3000
 server = app.listen(3000)
@@ -36,4 +31,8 @@ io.on('connect', (socket) => {
         console.log(data.message);
     })
 
-})
+});
+
+app.get('*', function(req,res){
+    res.render("pageNotFound.ejs");
+});
