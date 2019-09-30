@@ -14,4 +14,6 @@ To install the chat app:
  
  npm start
  
+ PS: The app runs on localhost 3000.
+ 
  Happy Chatting!!
